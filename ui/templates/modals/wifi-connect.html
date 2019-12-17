@@ -1,0 +1,17 @@
+<form class="modal modal--wifi-connect" data-connect-wifi-form>
+    <div class="modal__header">
+        Подключенние к сети {{ ssid }}
+    </div>
+    <div class="modal__body">
+        #if sec (context.secure)
+        <input autocomplete="false" type="password" class="input" placeholder="Пароль">
+        #endSec
+        #if unsec (!context.secure)
+        Открытая сеть
+        #endUnsec
+    </div>
+    <div class="modal__footer">
+        <button type="button" class="btn btn--default" data-modal-close>Отмена</button>
+        <button type="button" class="btn btn--primary" data-modal-send>Подключится</button>
+    </div>
+</form>

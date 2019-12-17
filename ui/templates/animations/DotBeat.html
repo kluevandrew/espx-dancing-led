@@ -1,0 +1,7 @@
+<div class="form">
+    <div class="form__row">{% engine.include("inputs/slider.html", {label: "Затемнение", key: "DotBeat.fade", min: 1, max: 255}) %}</div>
+    <div class="form__row">{% engine.include("inputs/slider.html", {label: "Ритм", key: "DotBeat.bpm", min: 1, max: 100}) %}</div>
+    <div class="form__row">{% engine.include("inputs/color.html", {label: "Внутренний цвет", key: "DotBeat.inner"}) %}</div>
+    <div class="form__row">{% engine.include("inputs/color.html", {label: "Средний цвет цвет", key: "DotBeat.middle"}) %}</div>
+    <div class="form__row">{% engine.include("inputs/color.html", {label: "Внешний цвет цвет", key: "DotBeat.outer"}) %}</div>
+</div>

@@ -1,0 +1,11 @@
+<div class="form">
+    <div class="form__row select-input">
+        <label for="SimpleFrequencyAnimation_direction">Режим</label>
+        <select data-option-input="SimpleFrequency.direction" id="SimpleFrequencyAnimation_direction">
+            <option value="0">Слева на права</option>
+            <option value="1">Справа на лево</option>
+            <option value="2">В две стороны</option>
+        </select>
+    </div>
+    {% engine.include("inputs/audio.html", {prefix: context.animation}) %}
+</div>

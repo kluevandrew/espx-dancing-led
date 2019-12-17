@@ -1,0 +1,15 @@
+.idea/httpRequests
+.idea/serialmonitor_settings.xml
+.idea/workspace.xml
+.pio
+cmake-build-debug
+cmake-build-debug32
+cmake-build-debug8266
+CMakeListsUser.txt
+venv
+devices.json
+log.txt
+node_modules
+yarn-error.log
+data
+.DS_Store

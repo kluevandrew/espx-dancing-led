@@ -1,0 +1,6 @@
+<div class="form">
+    <div class="form__row">{% engine.include("inputs/slider.html", {label: "Длительность", key: "Confetti.duration", min: 1, max: 100}) %}</div>
+    <div class="form__row">{% engine.include("inputs/slider.html", {label: "Задержка", key: "Confetti.delay", min: 1, max: 100}) %}</div>
+    <div class="form__row">{% engine.include("inputs/slider.html", {label: "Затемнение", key: "Confetti.fade", min: 1, max: 100}) %}</div>
+    <div class="form__row">{% engine.include("inputs/slider.html", {label: "Яркость", key: "Confetti.bright", min: 0, max: 255}) %}</div>
+</div>

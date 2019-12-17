@@ -1,0 +1,60 @@
+<p>
+Mode:
+#if ap (context.ap)
+Access Point
+#endap
+#if st (!context.ap)
+Station
+#endst
+
+IP: {{ ip }}
+
+<button class="btn btn--small btn--danger" data-reset-wifi>Отключится</button>
+</p>
+
+<table class="table wifi-networks-list">
+    <thead>
+    <tr>
+        <th>SSID</th>
+        <th>Sig.</th>
+        <th></th>
+    </tr>
+    </thead>
+    #if notRunning (!context.running)
+        <tbody>
+        #foreach networks(context.networks as network)
+        <tr>
+            <td>
+                #if encryption (context.network.encryption)
+                🔒
+                #endEncryption
+                #if hidden (context.network.isHidden)
+                {{ network.bssid }}
+                #endHidden
+                #if visible (!context.network.isHidden)
+                {{ network.ssid }}
+                #endVisible
+            </td>
+            <td>{{ network.rssi }} dBm ({{ network.channel }})</td>
+            <td class="text-right">
+                <button class="btn btn--small btn--primary" data-connect-wifi="{{ network.ssid }}" data-connect-wifi-secure="{% context.network.encryption ? 1 : 0 %}">Подключиться</button>
+            </td>
+        </tr>
+        #endNetworks
+        </tbody>
+    #endNotRunning
+    #if running (context.running)
+    <tbody>
+    <tr>
+        <td class="text-center" colspan="3">Подождите немного и нажмите обновить, идёт поиск сетей...</td>
+    </tr>
+    </tbody>
+    #endRunning
+    <tfoot>
+    <tr>
+        <td class="text-center" colspan="3">
+            <button class="btn btn--default" data-refresh-wifi>Обновить</button>
+        </td>
+    </tr>
+    </tfoot>
+</table>

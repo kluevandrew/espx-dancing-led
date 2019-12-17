@@ -1,0 +1,13 @@
+#if hideColors (!context.hideColors)
+<div class="form__row">{% engine.include("inputs/color.html", {label: "Цвет высоких частот", key: context.prefix + ".highColor"}) %}</div>
+<div class="form__row">{% engine.include("inputs/color.html", {label: "Цвет средних частот", key: context.prefix + ".midColor"}) %}</div>
+<div class="form__row">{% engine.include("inputs/color.html", {label: "Цвет низких частот", key: context.prefix + ".lowColor"}) %}</div>
+#endhideColors
+<div class="form__row">{% engine.include("inputs/slider.html", {label: "Максимальная яркость", key: context.prefix + ".maxBright", min: 0, max: 255}) %}</div>
+<div class="form__row">{% engine.include("inputs/slider.html", {label: "Минимальная яркость", key: context.prefix + ".minimalBright", min: 0, max: 255}) %}</div>
+<div class="form__row">{% engine.include("inputs/slider.html", {label: "micLowPass", key: context.prefix + ".micLowPass", min: 1, max: 4095}) %}</div>
+<div class="form__row">{% engine.include("inputs/slider.html", {label: "fftLowPass", key: context.prefix + ".fftLowPass", min: 1, max: 255}) %}</div>
+<div class="form__row">{% engine.include("inputs/slider.html", {label: "Сглаживание", key: context.prefix + ".smoothStep", min: 1, max: 100}) %}</div>
+<div class="form__row">{% engine.include("inputs/slider.html", {label: "smoothFrequency", key: context.prefix + ".smoothFrequency", float: 1, min: 0.1, max: 10}) %}</div>
+<div class="form__row">{% engine.include("inputs/slider.html", {label: "maxFrequencyCoefficient", key: context.prefix + ".maxFrequencyCoefficient", float: 2, min: 0.1, max: 10}) %}</div>
+<div class="form__row">{% engine.include("inputs/slider.html", {label: "averageCoefficient", key: context.prefix + ".averageCoefficient", float: 3, min: 0.001, max: 0.1, step: 0.001}) %}</div>

@@ -1,0 +1,7 @@
+<div class="form">
+    <div class="form__row">{% engine.include("inputs/slider.html", {label: "Задержка", key: "Rainbow.delay", min: 1, max: 100}) %}</div>
+    <div class="form__row">{% engine.include("inputs/slider.html", {label: "Период", key: "Rainbow.period", min: 1, max: 100}) %}</div>
+    <div class="form__row">{% engine.include("inputs/slider.html", {label: "Шаг", key: "Rainbow.step", min: 1, max: 100}) %}</div>
+    <div class="form__row">{% engine.include("inputs/slider.html", {label: "Насыщенность", key: "Rainbow.color.sat", min: 0, max: 255}) %}</div>
+    <div class="form__row">{% engine.include("inputs/slider.html", {label: "Яркость", key: "Rainbow.color.bright", min: 0, max: 255}) %}</div>
+</div>

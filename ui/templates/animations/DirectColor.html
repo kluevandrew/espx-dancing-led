@@ -1,0 +1,4 @@
+<div class="form">
+    <div class="form__row">{% engine.include("inputs/slider.html", {label: "Задержка", key: "DirectColor.delay", min: 1, max: 100}) %}</div>
+    <div class="form__row">{% engine.include("inputs/color.html", {label: "Цвет", key: "DirectColor.color"}) %}</div>
+</div>

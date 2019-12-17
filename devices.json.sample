@@ -1,0 +1,12 @@
+{
+  "espressif8266": {
+    "ip": "192.168.4.1",
+    "serial": "/dev/cu.wchusbserial1450",
+    "pass": "your value of OTA_PASSWORD"
+  },
+  "espressif32": {
+    "ip": "192.168.4.1",
+    "serial": "/dev/cu.SLAB_USBtoUAR",
+    "pass": "your value of OTA_PASSWORD"
+  }
+}

@@ -1,0 +1,57 @@
+/*
+ * This file is part of the espx-dancing-led distribution (https://github.com/kluevandrew/espx-dancing-led).
+ * Copyright (c) 2019, Kluev Andrew <kluev.andrew@gmail.com>.
+ *
+ * espx-dancing-led is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+ *
+ * You are free to:
+ *   Share — copy and redistribute the material in any medium or format
+ *   Adapt — remix, transform, and build upon the material
+ *
+ * Under the following terms:
+ *   Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+ *   NonCommercial — You may not use the material for commercial purposes.
+ *   ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
+ *   No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
+ *
+ * For additional information, see <http://creativecommons.org/licenses/by-nc-sa/4.0/>.
+ */
+#ifndef ESPX_DANCING_MUSIC_CONFIG_H
+#define ESPX_DANCING_MUSIC_CONFIG_H
+
+// FastLED options for ESP8266 (NodeMCU v2)
+#define FASTLED_ESP8266_RAW_PIN_ORDER
+#define FASTLED_ALLOW_INTERRUPTS 0
+#define FASTLED_INTERRUPT_RETRY_COUNT 1
+#define FASTLED_POWER_LIMIT 3000
+
+// Board pinout
+// LED
+#define LED_TYPE WS2813
+#define LED_COLOR_ORDER GRB
+#define LED_DATA_PIN 5 // wire from D1 on NodeMCU to both data pins on WS2813
+#define LED_LENGTH 256
+
+// MCP3208 (External ADC)
+#define ADC_CLOCK_PIN 15  // wire from D5 on NodeMCU to MCP3208 Pin 13
+#define ADC_MISO_PIN 13   // wire from D6 on NodeMCU to MCP3208 Pin 12
+#define ADC_MOSI_PIN 12   // wire from D7 on NodeMCU to MCP3208 Pin 11
+#define ADC_CS_PIN 14     // wire from D8 on NodeMCU to MCP3208 Pin 10
+#define ADC_MIC_CHANNEL 0 // wire from microphone output to MCP3208 Pin 1
+
+// WebServer option
+#define WEB_SERVER_PORT 80
+
+// WiFi options
+#define WIFI_AP_SSID "esp8266led"
+#define WIFI_AP_PASS "1234567890"
+// #define WIFI_CLIENT_SSID "MEDIA" // Optional
+// #define WIFI_CLIENT_PASS "media777vce" // Optional
+
+// OTA options
+#define OTA_PASSWORD "otaup"
+
+// SPIFF options
+#define SETTINGS_CAPACITY 4096
+
+#endif //ESPX_DANCING_MUSIC_CONFIG_H

@@ -1,0 +1,39 @@
+<div data-loader class="loader loader--infinity loader--visible">
+    <div class="loader__infinity"></div>
+    <div class="loader__progress">
+        <div data-loader-progress class="loader__progress-inner"></div>
+    </div>
+    <div data-loader-text class="loader__text">Загрузка</div>
+</div>
+<div class="navbar">
+    <p class="navbar__title">ESP8266-WEB-FASTLED-MUSIC</p>
+</div>
+
+<div class="content">
+    <h2>Анимация</h2>
+    <div class="animation-selector">
+        <label for="animation">Анимация</label>
+        <select name="animation-selector" id="animation" data-animation-selector>
+            <option value="noop">Выключено</option>
+            #foreach anim (context.ANIMATIONS as animation)
+                <option value="{{ animation.key }}">{{ animation.name }}</option>
+            #endanim
+        </select>
+    </div>
+    <div data-animation-settings></div>
+    <div class="save-settings">
+        <button class="btn btn--primary" data-save-settings>Сохранить настройки</button>
+        <button class="btn btn--danger" data-reset-settings>Сбросить настройки</button>
+    </div>
+    <br>
+    <hr>
+    <h2>Дополнительные настройки</h2>
+    <div class="additional-options">
+        <button class="btn btn--default" data-toggle-addition-options="wifi">WiFi</button>
+        <button class="btn btn--default" data-toggle-addition-options="adc">АЦП</button>
+        <button class="btn btn--default" data-toggle-addition-options="debug">Отладка</button>
+        <button class="btn btn--default" data-toggle-addition-options="misc">Прочее</button>
+        <div data-additional-options-content class="additional-options__content"></div>
+    </div>
+</div>
+<div data-modal-overlay class="modal-overlay"></div>

@@ -1,0 +1,13 @@
+<div class="form">
+    <div class="form__row select-input">
+        <label for="RunningFrequencyAnimation_mode">Режим</label>
+        <select data-option-input="RunningFrequency.mode" id="RunningFrequencyAnimation_mode">
+            <option value="0">Все частоты</option>
+            <option value="1">Высокие</option>
+            <option value="2">Средние</option>
+            <option value="3">Низкие</option>
+        </select>
+    </div>
+    <div class="form__row">{% engine.include("inputs/slider.html", {label: "Задержка", key: "RunningFrequency.delay", min: 1, max: 500}) %}</div>
+    {% engine.include("inputs/audio.html", {prefix: context.animation}) %}
+</div>

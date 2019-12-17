@@ -1,0 +1,4 @@
+<div class="slider">
+    <label for="{% engine.keyToId(context.key) %}">{{ label }}</label>
+    <div id="{% engine.keyToId(context.key) %}" data-slider="{{ key }}" data-float="{% (context.float ? context.float : '') %}" data-step="{% (context.step ? context.step : 1) %}" data-min="{{ min }}" data-max="{{ max }}"></div>
+</div>

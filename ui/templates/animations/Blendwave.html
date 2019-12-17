@@ -1,0 +1,6 @@
+<div class="form">
+    <div class="form__row">{% engine.include("inputs/slider.html", {label: "Ритм 1", key: "Blendwave.bpm1", min: 1, max: 100}) %}</div>
+    <div class="form__row">{% engine.include("inputs/slider.html", {label: "Ритм 2", key: "Blendwave.bpm2", min: 1, max: 100}) %}</div>
+    <div class="form__row">{% engine.include("inputs/slider.html", {label: "Яркость", key: "Blendwave.bright", min: 0, max: 255}) %}</div>
+    <div class="form__row">{% engine.include("inputs/slider.html", {label: "Насыщенность", key: "Blendwave.sat", min: 0, max: 255}) %}</div>
+</div>
